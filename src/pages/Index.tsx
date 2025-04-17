@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import LandingSection from '@/components/sections/LandingSection';
 import UploadSection from '@/components/deepfake/UploadSection';
 import EducationalSection from '@/components/sections/EducationalSection';
@@ -9,7 +10,7 @@ import OutroSection from '@/components/sections/OutroSection';
 import SpaceshipScene from '@/components/three/SpaceshipScene';
 
 // Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Index = () => {
   const appRef = useRef<HTMLDivElement>(null);
@@ -26,14 +27,13 @@ const Index = () => {
         markers: false
       });
       
-      // Smooth scroll to sections
+      // Smooth scroll to sections - removing the ease property that was causing the error
       gsap.to(window, {
         duration: 1,
         scrollTo: {
           y: "#upload-section",
           offsetY: 70,
-          autoKill: true,
-          ease: "power2.inOut"
+          autoKill: true
         }
       });
     };
