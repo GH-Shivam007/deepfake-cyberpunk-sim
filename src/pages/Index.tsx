@@ -25,11 +25,21 @@ const Index = () => {
         toggleActions: 'play none none reverse',
         markers: false
       });
+      
+      // Smooth scroll to sections
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+          y: "#upload-section",
+          offsetY: 70,
+          autoKill: true,
+          ease: "power2.inOut"
+        }
+      });
     };
     
     setupSmoothScroll();
     
-    // Clean up ScrollTrigger on component unmount
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       window.history.scrollRestoration = 'auto';
