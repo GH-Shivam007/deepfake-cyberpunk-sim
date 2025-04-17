@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
 
-## Project info
+# Deepfake Cyberpunk Simulation
 
-**URL**: https://lovable.dev/projects/0cef9f49-64d5-45f0-8454-c9d0b0c871a7
+An immersive, visually stunning, and educational website that simulates deepfake detection with cyberpunk aesthetics.
 
-## How can I edit this code?
+## Project Overview
 
-There are several ways of editing your application.
+This project creates an interactive experience combining neon cyberpunk visuals with educational content about deepfake technology. The simulation allows users to "upload" a video and see a simulated deepfake detection process with random results.
 
-**Use Lovable**
+### Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0cef9f49-64d5-45f0-8454-c9d0b0c871a7) and start prompting.
+- **Immersive Cyberpunk Aesthetics**: Neon colors, glowing elements, and a futuristic interface
+- **Interactive Elements**: Animated upload section, hoverable information cards
+- **Scroll Animations**: Content reveals and transitions as users scroll down the page
+- **3D Spaceship Animation**: A 3D scene with a rotating spaceship that responds to scroll position
+- **Educational Content**: Information about deepfakes and how to protect yourself
+- **Detection Simulation**: A simulated analysis process that randomly determines if a video is authentic or fake
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technologies Used
 
-**Use your preferred IDE**
+- React + TypeScript
+- Three.js for 3D animations
+- GSAP for scroll-triggered animations
+- TailwindCSS for styling
+- Custom components for cyberpunk UI elements
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The project is organized into reusable components:
 
-Follow these steps:
+- **UI Components**
+  - `GlitchText`: Text with cyberpunk glitch effects
+  - `NeonButton`: Glowing buttons with hover effects
+  - `NeonCard`: Cards with neon borders and hover animations
+  - `GlitchImage`: Images with glitch effects
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Three.js Components**
+  - `SpaceshipScene`: 3D scene with animated spaceship that responds to scroll
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Sections**
+  - `LandingSection`: Introduction with animated titles
+  - `UploadSection`: Video upload and analysis simulation
+  - `EducationalSection`: Information cards about deepfakes
+  - `OutroSection`: Final message and call-to-action
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Visual Design
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+The project uses a carefully crafted cyberpunk color palette:
 
-**Edit a file directly in GitHub**
+- **Neon Purple** (#9b4dff): Primary accent color
+- **Electric Cyan** (#00ffff): Secondary accent color
+- **Hot Pink** (#ff00ff): Highlight color
+- **Deep Black** (#1a1a1a): Background color
+- **Dark Grey** (#333333): Secondary background color
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Key Interactions
 
-**Use GitHub Codespaces**
+1. **Title Animation**: Text reveals with glitch effects on load
+2. **Scroll Animation**: Content appears and animates as the user scrolls
+3. **File Upload**: Simulated upload interface with drag-and-drop support
+4. **Detection Simulation**: Animated scanning process with a random result
+5. **Hover Effects**: Interactive cards and buttons with glow effects
+6. **Return to Top**: Button to restart the experience
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Future Enhancements
 
-## What technologies are used for this project?
+- Add actual deepfake detection functionality
+- Implement more complex 3D scenes and animations
+- Create a mobile-optimized version
+- Add user accounts to save detection history
 
-This project is built with:
+## Getting Started
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the development server with `npm run dev`
+4. Open your browser to the local development URL
 
-## How can I deploy this project?
+## Credits
 
-Simply open [Lovable](https://lovable.dev/projects/0cef9f49-64d5-45f0-8454-c9d0b0c871a7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project was created as a demonstration of combining modern web technologies with educational content in an engaging, visually appealing format.
